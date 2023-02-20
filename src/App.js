@@ -5,13 +5,13 @@ import Inputs from "./components/Inputs";
 import { TimeAndLocation } from "./components/TimeAndLocation";
 import { TemperatureAndDetails } from "./components/TemperatureAndDetails";
 import { Forecast } from "./components/Forecast";
-import getWeatherData from "./services/weatherService";
+
 import getFormattedWeatherData from "./services/weatherService";
 import { useEffect, useState } from "react";
 
 export default function App() {
   const [query, setQuery] = useState({ q: "waxahachie" });
-  const [units, setUnits] = useState("imperial");
+  const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
