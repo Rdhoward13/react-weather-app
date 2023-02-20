@@ -1,10 +1,9 @@
 import "./App.css";
-import UilReact from "@iconscout/react-unicons/icons/uil-react";
 import TopButtons from "./components/TopButtons";
 import Inputs from "./components/Inputs";
 import { TimeAndLocation } from "./components/TimeAndLocation";
 import { TemperatureAndDetails } from "./components/TemperatureAndDetails";
-import { Forecast } from "./components/Forecast";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -47,12 +46,9 @@ export default function App() {
         <div>
           <TimeAndLocation weather={weather} />
           <TemperatureAndDetails weather={weather} />
-
-          <Forecast title="Hourly Forecast" items={weather.hourly} />
-          <Forecast title="Daily Forecast" items={weather.daily} />
         </div>
       )}
-      <ToastContainer autoClose={5000} theme="colored" newestOnTop={true} />
+      <ToastContainer autoClose={2000} theme="colored" newestOnTop={true} />
     </div>
   );
 }
